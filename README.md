@@ -1,2 +1,2 @@
 # DSA-From-Scratch
-Data Structure and Algorithms from scratch. 
+Data Structure and Algorithms from scratch in Python. 
