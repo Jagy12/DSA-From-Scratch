@@ -26,6 +26,3 @@ This means:
 2. enumerate() is a built-in Python function that adds a counter to an iterable (like a list, tuple, or string) and returns it as an enumerate object, which you can loop over to get both the index and the value at the same time.
 
 3. The list() constructor in Python can be used to create a list from different types of iterable objects, such as strings, ranges, tuples, sets, or dictionaries.
-
-
-
