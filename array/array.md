@@ -9,36 +9,23 @@ Arrays are used to store multiple items in a single variable. In Python, arrays 
 - Stores elements of the same data type.
 
 ## If speed and memory efficiency are not a concern, lists are  the best choice to represent arrays in Python.
-## Otherwise array module and NumPy arrays used.(For larger Datasets)
+## Otherwise array module or NumPy arrays used.(For larger Datasets)
 
 ## Operations on Arrays
-- Insertion
-- Deletion
+- Basic operations like : Insertion, Deletion, Replacing, counting, searching, sorting, reversing, copying, etc.
 - Traversal
+- Slicing
 
-arr = [10, 20, 30, 40]
-print(arr[0])       # Access first element → 10
-arr[2] = 99         # Modify element
-arr.append(50)      # Add to end
-arr.insert(1, 15)   # Insert at index
-arr.pop()           # Remove last
-arr.remove(20)      # Remove by value
-len(arr)            # Get length
+## Some Key Definitions.
+1. List comprehension is a concise and elegant way to create lists in Python.
+Instead of writing multiple lines with a loop to generate a list, you can write it in one line using a clean and readable syntax.
+Basic Syntax: [expression for item in iterable]
+This means:
+“Do something with each 'item' in 'iterable' and collect the results in a list.”
 
+2. enumerate() is a built-in Python function that adds a counter to an iterable (like a list, tuple, or string) and returns it as an enumerate object, which you can loop over to get both the index and the value at the same time.
 
-import array
-
-arr = array.array('i', [1, 2, 3, 4])  # 'i' for integers
-arr.append(5)
-print(arr)
-
-
-import numpy as np
-
-arr = np.array([1, 2, 3])
-print(arr + 5)          # [6 7 8]
-print(arr * 2)          # [2 4 6]
-print(np.mean(arr))     # Average
+3. The list() constructor in Python can be used to create a list from different types of iterable objects, such as strings, ranges, tuples, sets, or dictionaries.
 
 
 
