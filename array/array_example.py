@@ -1,5 +1,5 @@
 # ## Using Python lists as array. 
-arr = [10, 20, 80, 30, 40,10, 50 , 90,]
+# arr = [10, 20, 80, 30, 40,10, 50 , 90,]
 # arr1 = [1, 4, 2, 6, 7, 4, 6, 9]
 
 # ## Basic Operations. 
@@ -79,16 +79,101 @@ arr = [10, 20, 80, 30, 40,10, 50 , 90,]
 
 
 # ##2. Python's array Module (for fixed-type arrays)
-# import array
+from array import array
 
-# arr = array.array('i', [1, 2, 3, 4])  # 'i' for integers
-# arr.append(5)
-# print(arr)
+arr_int = array('i', [1, 2, 3, 4, 5])  #  Create an array of integers (signed)
+# arr_float = array('f', [1.5, 2.5, 3.5])#  Create an array of floats
+# print(arr_int)
+# print(arr_float)
+
+# byteswap() : Swaps the byte order (useful for different-endian machines).
+# arr3 = array('h', [1, 256])
+# arr3.byteswap()        
+# print(arr3)
+
+# typecode : Gives the data type code used for array elements.
+# print(arr_int.typecode)  # Output: 'i' (integer)
+
+# itemsize : Returns the size (in bytes) of one array element.
+# print(arr_int.itemsize)  # Example: 4 bytes (depends on system)
+
+#tolist() : Converts the array into a Python list.
+# arr_list = arr_int.tolist() #Converts the array into a list.
+# print(arr_list)
+# print(type(arr_list))
+
+# buffer_info(): Returns a tuple: (memory address, number of elements).
+# address, length = arr_int.buffer_info() #Returns a tuple containing the address and length of the buffer used by the array.
+# print(f"Address of array in memory: {address}")
+# print(f"Length (number of elements): {length}")
 
 # ##3. NumPy Arrays (for data science / numerical computing)
-# import numpy as np
+import numpy as np
 
-# arr = np.array([1, 2, 3])
-# print(arr + 5)          # [6 7 8]
-# print(arr * 2)          # [2 4 6]
-# print(np.mean(arr))     # Average
+arr = np.array([1, 2, 3, 4])
+# ## Creating Arrays
+# arr1 = np.array([1, 2, 3, 4])           # 1D array
+# arr2 = np.array([[1, 2], [3, 4]])        # 2D array (Matrix)
+# arr3 = np.zeros((2, 3))                  # Array of all zeros
+# arr4 = np.ones((2, 3))                   # Array of all ones
+# arr5 = np.arange(0, 10, 2)               # [0, 2, 4, 6, 8]
+# arr6 = np.linspace(0, 1, 5)              # [0. , 0.25, 0.5 , 0.75, 1.]
+# arr7 = np.eye(3)                         # Identity matrix
+# arr8 = np.random.rand(2,3)               # Random array
+
+# ## Basic Operations
+# print(arr + 1)      # [2 3 4 5]
+# print(arr * 2)      # [2 4 6 8]
+# print(arr ** 2)     # [1 4 9 16]
+# print(np.sqrt(arr)) # [1. 1.4142 1.732 2.]
+# print(np.sum(arr))  # 10
+# print(np.max(arr))  # 4
+# print(np.min(arr))  # 1
+# print(np.mean(arr)) # 2.5
+# print(np.argmax(arr)) # Index of max element
+# print(np.argmin(arr)) # Index of min element
+# print(np.cumsum(arr)) # Cumulative sum
+# print(np.cumprod(arr)) # Cumulative product
+
+## Array Reshaping
+# arr = np.array([1,2,3,4,5,6])
+# arr = arr.reshape(2, 3)     # 2 rows, 3 columns
+# print(arr)
+# arr.flatten()   # Convert to 1D array
+
+## Array Slicing and Indexing
+# arr = np.array([[1, 2, 3],
+#                 [4, 5, 6]])
+# print(arr[0, 0])   # 1
+# print(arr[:, 1])   # Second column [2, 5]
+# print(arr[1, :])   # Second row [4, 5, 6]
+
+## Sorting and Searching
+print(np.sort(arr)) # Sort array
+# print(np.argsort(arr)) # Indices that would sort array
+# print(np.where(condition)) # Find elements that match condition
+# print(np.searchsorted(arr, values)) # Find insertion points
+
+##Comparison Operations
+a= [], b = []
+# print(np.equal(a, b))
+# print(np.not_equal(a, b))
+# print(np.greater(a, b))
+# print(np.greater_equal(a, b))
+# print(np.less(a, b))
+# print(np.less_equal(a, b))
+# print(np.all(a)) # Are all elements True?
+# print(np.any(a))# Is any element True?
+
+## Matrix Operations
+# a = [], b = []
+# print(np.dot(a, b)) # Dot product
+# print(np.matmul(a, b)) # Matrix multiplication
+# print(np.transpose(a)) # Transpose matrix
+# print(np.linalg.inv(a)) # Inverse of matrix
+# print(np.linalg.det(a)) # Determinant of matrix
+
+## Broadcasting
+# a = np.array([1,2,3])
+# b = 2
+# print(a + b)   # [3 4 5]
