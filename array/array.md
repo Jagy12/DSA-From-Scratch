@@ -65,7 +65,7 @@ To use arrays, you must import the array module in Python (from array import arr
 - Traversal
 - Slicing
 
-## B. Operation	Purpose	Special to array (Importing Array Module)
+## B. Operations	Purpose	Special to array (Importing Array Module)
 - buffer_info()	Address and size in memory	
 - typecode	Data type code ('i', 'f', etc.)	
 - itemsize	Size of one item (bytes)	

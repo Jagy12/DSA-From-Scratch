@@ -79,9 +79,9 @@
 
 
 # ##2. Python's array Module (for fixed-type arrays)
-from array import array
+# from array import array
 
-arr_int = array('i', [1, 2, 3, 4, 5])  #  Create an array of integers (signed)
+# arr_int = array('i', [1, 2, 3, 4, 5])  #  Create an array of integers (signed)
 # arr_float = array('f', [1.5, 2.5, 3.5])#  Create an array of floats
 # print(arr_int)
 # print(arr_float)
@@ -108,9 +108,9 @@ arr_int = array('i', [1, 2, 3, 4, 5])  #  Create an array of integers (signed)
 # print(f"Length (number of elements): {length}")
 
 # ##3. NumPy Arrays (for data science / numerical computing)
-import numpy as np
+# import numpy as np
 
-arr = np.array([1, 2, 3, 4])
+# arr = np.array([1, 2, 3, 4])
 # ## Creating Arrays
 # arr1 = np.array([1, 2, 3, 4])           # 1D array
 # arr2 = np.array([[1, 2], [3, 4]])        # 2D array (Matrix)
@@ -149,27 +149,29 @@ arr = np.array([1, 2, 3, 4])
 # print(arr[1, :])   # Second row [4, 5, 6]
 
 ## Sorting and Searching
-print(np.sort(arr)) # Sort array
+# print(np.sort(arr)) # Sort array
 # print(np.argsort(arr)) # Indices that would sort array
 # print(np.where(condition)) # Find elements that match condition
 # print(np.searchsorted(arr, values)) # Find insertion points
 
 ##Comparison Operations
-a= [], b = []
-# print(np.equal(a, b))
-# print(np.not_equal(a, b))
-# print(np.greater(a, b))
-# print(np.greater_equal(a, b))
-# print(np.less(a, b))
+# a, b= [0,1,2,3,4,4], [6,7,9,4]
+# print(np.equal(a, b))  # Returns True if equal
+# print(np.not_equal(a, b)) # Returns True if not equal
+# print(np.greater(a, b))  # Returns True if a > b
+# print(np.greater_equal(a, b)) # Returns True if a >= b
+# print(np.less(a, b))  # Returns True if a < b
 # print(np.less_equal(a, b))
-# print(np.all(a)) # Are all elements True?
-# print(np.any(a))# Is any element True?
+# print(np.all(a)) # Are all elements True? # Return True if all elements are non-zero
+# print(np.any(b))# Is any element True? #   Return True if any elements are non-zero
 
 ## Matrix Operations
-# a = [], b = []
+# a, b= [5, 7, 8, 0, 3], [2, 8, 3, 2, 7]
 # print(np.dot(a, b)) # Dot product
 # print(np.matmul(a, b)) # Matrix multiplication
-# print(np.transpose(a)) # Transpose matrix
+
+# a = np.array([[1, 2], [3, 4]]) 
+# print(np.transpose(a)) # Transpose matrix   ## transpose switches rows ↔️ columns.
 # print(np.linalg.inv(a)) # Inverse of matrix
 # print(np.linalg.det(a)) # Determinant of matrix
 
